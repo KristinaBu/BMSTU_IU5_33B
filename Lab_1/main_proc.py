@@ -30,10 +30,14 @@ def calculation(coef_list):
     D = B**2 - 4*A*C
     #Корни
     root_list = set()
-    if (D>=0):
-        root_list.add( (-B + math.sqrt(D))/ (2*A) )
-        root_list.add( (-B - math.sqrt(D))/ (2*A) )
-    return root_list
+    all_roots = set()
+    if (D >= 0.0):
+        root_list.add( (-B + math.sqrt(D))/ (2.0 * A) )
+        root_list.add( (-B - math.sqrt(D))/ (2.0 * A) )
+    for r in root_list:
+        all_roots.add(math.sqrt(r))
+        all_roots.add(- math.sqrt(r))
+    return all_roots
 
 def print_ans(root_list):
     """Вывод ответов"""
