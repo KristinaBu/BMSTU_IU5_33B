@@ -2,18 +2,25 @@ import math
 import sys
 
 def check_root(ind):
-    """Проверка коэфов -> возвращает один коэф"""
+    """Проверка коэфов"""
     try:
         global coef
-        coef = sys.argv[ind]
+        try:
+            coef = float(sys.argv[ind])
+        except ValueError:
+            print("Ошибка. Попробуйте еще раз")
     except:
         print("Введите коэффициент {} :".format(ind) )
-        coef = input()
-        #Проверка А на ноль(иначе впоследствие ошибка в делении на ноль)
-        if float(coef) == 0.0 and ind == 1:
-            print("Коэффициент 1 равен 0. Так не пойдет")
-            check_root(1)
+        try:
+            coef = input()
+            # Проверка А на ноль(иначе впоследствие ошибка - делениe на ноль)
+            if float(coef) == 0.0 and ind == 1:
+                print("Коэффициент 1 равен 0. Так не пойдет")
+                check_root(1)
+        except ValueError:
+            check_root(ind)
     return float(coef)
+
 
 def get_roots(coef_list):
     """Получение значений коэфов -> возвращает список коэфов"""
@@ -35,8 +42,9 @@ def calculation(coef_list):
         root_list.add( (-B + math.sqrt(D))/ (2.0 * A) )
         root_list.add( (-B - math.sqrt(D))/ (2.0 * A) )
     for r in root_list:
-        all_roots.add(math.sqrt(r))
-        all_roots.add(- math.sqrt(r))
+        if r>=0:
+            all_roots.add(math.sqrt(r))
+            all_roots.add(- math.sqrt(r))
     return all_roots
 
 def print_ans(root_list):
