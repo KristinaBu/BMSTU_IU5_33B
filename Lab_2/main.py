@@ -18,7 +18,7 @@ def main():
 
 
     #Первый способ
-    result = pyfiglet.figlet_format("Laba - 2", font="3-d")
+    result = pyfiglet.figlet_format("L a b a - 2", font="3-d")
     print(result)
     #Второй способ
     f = pyfiglet.Figlet(font='slant')
@@ -29,8 +29,6 @@ def main():
     squares = [r1.square(),r2.square(),r3.square(),
                c1.square(),c2.square(),c3.square(),
                s1.square(),s2.square(),s3.square()]
-    for sq in squares: print(sq)
-
 
     fig, ax = plt.subplots()
     #заголовки
