@@ -35,11 +35,11 @@ class FigureColor1:
         Set-аксессор
         """
         self._color = value
-"""
+'''
 a = FigureColor()
 b = FigureColor1()
 a.colorproperty = 2
 b.set_color(2)
 print(a.colorproperty, b.get_color())
-"""
+'''
 

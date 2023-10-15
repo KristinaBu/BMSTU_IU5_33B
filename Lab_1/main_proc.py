@@ -38,6 +38,7 @@ def calculation(coef_list):
     #Корни
     root_list = set()
     all_roots = set()
+    print(D)
     if (D >= 0.0):
         root_list.add( (-B + math.sqrt(D))/ (2.0 * A) )
         root_list.add( (-B - math.sqrt(D))/ (2.0 * A) )

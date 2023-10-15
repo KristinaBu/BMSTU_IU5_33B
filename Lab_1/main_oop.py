@@ -67,3 +67,67 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+"""
+module lab1_1
+
+package main
+inport "fmt"
+
+func main(){
+    var coef_list [3]int{0.0, 0.0, 0.0,}
+    all_process(coef_list)
+}
+
+func all_process(int coef_list){
+    print_ans(calculation(get_roots(coef_list)))
+}
+
+func print_ans(int root_list){
+    if ....... == 0 {
+        fmt.Println("Нет корней, дискриминант меньше нуля :(")
+        return
+    }else{
+        fmt.Println("Корни:")
+        for _, e := range root_list{
+            fmt.Println(e, " ")
+        }
+    }
+    
+}
+
+func calculation(int coef_list){ float }{
+     A := coef_list[0]
+     B := coef_list[1]
+     C := coef_list[2]
+     A := B**2 - 4*A*C
+    ....
+    ....
+    if D >= 0.0{
+        root_list.add( (-B + math.sqrt(D))/ (2.0 * A) )
+        root_list.add( (-B - math.sqrt(D))/ (2.0 * A) )
+    }
+    for r in root_list{
+        if r>=0 {
+            ...
+            ...
+        }
+    }
+    return all_roots
+}
+
+func get_roots(int coef_list){ float } {
+    for i, e := range root_list{
+        e = check_root(i+1)
+    }
+    return coef_list
+}
+
+func check_root(){
+
+}
+
+//функция как параметн в другую функцию 
+"""
