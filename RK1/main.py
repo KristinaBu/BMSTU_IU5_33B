@@ -94,13 +94,13 @@ def main():
                     for dep_name, dep_id, emp_id in many_to_many_temp
                     for e in musicians if e.id == emp_id]
 
-    print('Задание А1')
+    print('Задание 1')
 
     res_11 = sorted([(fio, sal, name) for fio, sal, name in one_to_many if fio.startswith('А')], key=itemgetter(2))
     for i in res_11:
         print(i)
 
-    print('\nЗадание А2')
+    print('\nЗадание 2')
     res_12_unsorted = []
     # Перебираем все отделы оркестра
     for d in orchestras:
@@ -118,7 +118,7 @@ def main():
     res_12 = sorted(res_12_unsorted, key=itemgetter(1),)
     print(res_12)
 
-    print('\nЗадание А3')
+    print('\nЗадание 3')
     res_13 = {}
     sorted_many_to_many = sorted(many_to_many, key=itemgetter(0))
 
@@ -138,3 +138,12 @@ if __name__ == '__main__':
     main()
 
 
+#Out:
+#Задание А1
+#('Артамонов', 25000, 'деревянные духовые')
+#
+#Задание А2
+#[('деревянные духовые', 25000), ('ударные', 25000), ('медные духовые', 35000), ('струнные смычковые', 35000)]
+#
+#Задание А3
+#{'деревянные духовые': ['Артамонов'], 'медные духовые': ['Петров'], 'струнные смычковые': ['Иваненко', 'Иванов'], 'ударные': ['Сушкин'], 'деревянные духовые (другое)': ['Артамонов'], 'медные духовые (другое)': ['Петров'], 'струнные смычковые (другое)': ['Иваненко', 'Иванов'], 'ударные (другое)': ['Сушкин']}
