@@ -38,7 +38,6 @@ class MusOrch:
         self.mus_id = mus_id
 
 
-# Отделы
 orchestras = [
     Orchestra(1, 'деревянные духовые'),
     Orchestra(2, 'медные духовые'),
@@ -51,7 +50,6 @@ orchestras = [
     Orchestra(44, 'ударные (другое)'),
 ]
 
-# Сотрудники
 musicians = [
     Musician(1, 'Артамонов', 25000, 1),
     Musician(2, 'Петров', 35000, 2),
@@ -106,7 +104,6 @@ def main():
     for d in orchestras:
         # Список музыкантов отдела оркестра
         d_emps = list(filter(lambda i: i[2] == d.name, one_to_many))
-        # Если отдел не пустой
         if len(d_emps) > 0:
             # Зарплаты музыкантов отдела оркестра
             d_sals = [sal for _, sal, _ in d_emps]
