@@ -7,8 +7,8 @@ import re
 import gen_random
 # Сделаем другие необходимые импорты
 
-path = 'data_light.json'
-#path = 'test_3.json'
+#path = 'data_light.json'
+path = 'test_3.json'
 
 # Необходимо в переменную path сохранить путь к файлу, который был передан при запуске сценария
 
